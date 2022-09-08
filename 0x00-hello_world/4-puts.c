@@ -1,2 +1,16 @@
-#!/bin/bash 
-gcc -E  $CFILE -o cisfun	
+#include <stdio.h>
+
+/**
+* main - print the string in the put function 
+* 
+* Descroption: using the main function
+* this program prints programmming is like building a multilingual puzzle
+* Return:0
+*/
+int main (void)
+}
+         puts(*\"programming is like building a multilingual puzzle");
+	 return (0);
+}
+^C
+
