@@ -1,36 +1,18 @@
 #include <stdio.h>
 
 /**
- *  main - Prints numbers between 00 to 89.
+ * main - Prints the alphabet.
  *
- *  Return: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i, e;
+	char alp[26] = "abcdefghijklmnopqrstuvwxyz";
+	int i;
 
-	i = 48;
-	e = 48;
-
-	while (e < 58)
+	for (i = 0; i < 26; i++)
 	{
-		i = 48;
-		while (i < 58)
-		{
-			if (e != i && e < i)
-			{
-				putchar(e);
-				putchar(i);
-				if (i == 57 && e == 56)
-				{
-					break;
-				}
-				putchar(',');
-				putchar(' ');
-			}
-			i++;
-		}
-		e++;
+		putchar(alp[i]);
 	}
 	putchar('\n');
 	return (0);
