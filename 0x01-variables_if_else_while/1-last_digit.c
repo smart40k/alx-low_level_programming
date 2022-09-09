@@ -1,44 +1,30 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 
 /**
- * main - Prints numbers between 012 to 789.
+ * main - Determines either greater than 5, is less than 6, or is 0
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i, e, g;
+	int n, l;
 
-	i = 48;
-	e = 48;
-	g = 48;
-
-	while (e < 58)
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	l = n % 10;
+	if (l > 5)
 	{
-		i = 48;
-		while (i < 58)
-		{
-			g = 48;
-			while (g < 58)
-			{
-				if (e != i && e != g && i != g && e < i && i < g)
-				{
-					putchar(e);
-					putchar(i);
-					putchar(g);
-					if (i == 56 && e == 55 && g == 57)
-					{
-						break;
-					}
-					putchar(',');
-					putchar(' ');
-				}
-				g++;
-			}
-			i++;
-		}
-		e++;
+		printf("Last digit of %d is %d and is greater than 5\n", n, l);
 	}
-	putchar('\n');
+	else if (l == 0)
+	{
+		printf("Last digit of %d is %d and is 0\n", n, l);
+	}
+	else
+	{
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, l);
+	}
 	return (0);
 }
