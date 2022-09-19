@@ -1,9 +1,8 @@
 #include "holberton.h"
 
 /**
- * _puts - print a string
- * @str:pointer char
- * return:void
+ * _puts - print a string to stdout
+ * @str: pointer to the string to print
  */
 void _puts(char *str)
 {
@@ -14,5 +13,4 @@ void _puts(char *str)
 		_putchar(str[i]);
 	}
 	_putchar('\n');
-	return;
 }
