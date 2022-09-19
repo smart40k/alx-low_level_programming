@@ -1,18 +1,24 @@
-#include "main.h"
+#include "holberton.h"
+
 /**
- * puts_half - function
- *
- * @str: pointer of parameter
+ * puts_half - lenght of string
+ * @str:char
+ * Return:int
  */
 void puts_half(char *str)
 {
-	int length = 0;
-	int sublength;
+	int i, j;
 
-	while (str[length] != '\0')
-		length++;
-	sublength = (length % 2 == 0) ? length / 2 : (length + 1) / 2;
-	while (str[sublength] != '\0')
-		_putchar(str[sublength++]);
-	_putchar(10);
+	i = 0;
+	while (str[i])
+		i++;
+	j = i / 2;
+	if (i % 2)
+		j += 1;
+	while (j < i)
+	{
+		_putchar(str[j]);
+		j++;
+	}
+	_putchar('\n');
 }
