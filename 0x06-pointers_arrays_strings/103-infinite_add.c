@@ -1,17 +1,17 @@
 #include "main.h"
 
 /**
- * infinite_add - adds two numbers.
- * @n1:char
- * @n2:char.
- *  @r:char
- *  @size_r:int
- *  Return:char.
+ * infinite_add - adds two numbers
+ * @n1: first number
+ * @n2: second number
+ *  @r: buffer for result
+ *  @size_r: buffer size
+ *
+ *  Return: address of r or 0
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i, j, k, l, m, n;
-
 	for (i = 0; n1[i]; i++)
 		;
 	for (j = 0; n2[j]; j++)
@@ -41,6 +41,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		m = r[k];
 		r[k] = r[l];
 		r[l] = m;
-}
-return (r);
+	}
+	return (r);
 }
