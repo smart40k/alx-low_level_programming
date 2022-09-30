@@ -3,35 +3,27 @@
 #include <ctype.h>
 
 /**
- * main - print the minimum number of coins to make change
- * @argc: int
- * @argv: string
- * Return: int
+ * main - adds positive numbers
+ * @argc: number of command line arguments
+ * @argv: array that contains the program command line arguments
+ * Return: 0 - success
  */
 
 int main(int argc, char *argv[])
 {
-	int i, n, s, ch = 0;
-	int c[] = {25, 10, 5, 2, 1};
-
-	if (argc != 2)
+	int i, j, add = 0;
+	for (i = 1; i < argc; i++)
 	{
-		printf("Error\n");
-		return (1);
-	}
-	s = atoi(argv[1]);
-	if (s < 1)
-		printf("0\n");
-	else
-	{
-		for (i = 0; i < 5 && s; i++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			n = s / c[i];
-			ch += n;
-			s -= n *c[i];
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-
-		printf("%d\n", ch);
+		add += atoi(argv[i]);
 	}
+	printf("%d\n", add);
 	return (0);
 }
