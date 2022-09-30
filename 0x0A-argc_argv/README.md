@@ -1,1 +1,1 @@
-'3-mul.c is a program that multiplies two numbers'
+'4-add.c is a program that adds positive numbers'
