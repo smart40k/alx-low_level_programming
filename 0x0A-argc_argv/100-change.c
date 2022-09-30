@@ -7,7 +7,6 @@
  * make change for an amount of money
  * @argc: number of arguments
  * @argv: array of arguments
- *
  *  Return: 0 (Success), 1 (Error)
  */
 
