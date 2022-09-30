@@ -1,1 +1,1 @@
-'2-args.c is a program that prints all arguments it receives'
+'3-mul.c is a program that multiplies two numbers'
