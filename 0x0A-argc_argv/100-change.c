@@ -29,6 +29,7 @@ int main(int argc, char *argv[])
 			ch += n;
 			s -= n *c[i];
 		}
+
 		printf("%d\n", ch);
 	}
 	return (0);
