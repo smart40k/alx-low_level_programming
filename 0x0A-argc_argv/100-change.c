@@ -28,6 +28,7 @@ int main(int argc, char *argv[])
 			n = s / c[i];
 			ch += n;
 			s -= n *c[i];
+
 		}
 		printf("%d\n", ch);
 	}
