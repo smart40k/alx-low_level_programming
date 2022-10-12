@@ -38,12 +38,12 @@ int op_mul(int a, int b)
  */
 int op_div(int a, int b)
 {
-		if (b)
-				{
-							return (a / b);
-								}
-			printf("Error\n");
-				exit(100);
+	if (b)
+	{
+		return (a / b);
+	}
+	printf("Error\n");
+	exit(100);
 }
 /**
  * op_mod - is a function that performs modulo
