@@ -1,19 +1,28 @@
 #include "function_pointers.h"
 /**
- *  array_iterator - excute a function on array element
- *  @array: array
- *  @size: size_t
- *  @action:function to be excuted
- *  Return:void
+ * int_index - Search for an integer
+ * @array:int
+ * @size:int
+ * @cmp:function
+ * Return:index of the integer searched for
  */
-void array_iterator(int *array, size_t size, void (*action)(int))
+int int_index(int *array, int size, int (*cmp)(int))
 {
-	size_t i;
+	int i, x;
 
-	i = 0;
-	if (action != NULL && array != NULL)
+	if (size <= 0)
+	{
+		return (-1);
+	}
+	if (size && cmp != NULL && array != NULL)
 	{
 		for (i = 0; i < size; i++)
-			action(array[i]);
+		{
+			x = cmp(array[i]);
+			if (x != 0)
+				return (i);
+		}
 	}
+	return (-1);
+
 }
