@@ -6,22 +6,20 @@
  * @list:arg
  * Return: void
  */
-
 void p_char(va_list list)
 {
 	printf("%c", va_arg(list, int));
 }
 /**
  * p_string - print string
- *  @list:arg
- *  Return: void
+ * @list:arg
+ * Return: void
  */
-
 void p_string(va_list list)
 {
-	char *str;
+	char *str
 
-	str = va_arg(list, char*);
+		str = va_arg(list, char*);
 	if (str == NULL)
 		str = "(nil)";
 	printf("%s", str);
@@ -31,6 +29,17 @@ void p_string(va_list list)
  * @list:arg
  * Return: void
  */
+
+void p_integer(va_list list)
+{
+	printf("%i", va_arg(list, int));
+}
+/**
+ * p_float - print float
+ * @list:arg
+ * Return: void
+ */
+
 void p_float(va_list list)
 {
 	printf("%f", va_arg(list, double));
@@ -40,18 +49,17 @@ void p_float(va_list list)
  * @format:arg
  * Return: void
  */
-
 void print_all(const char * const format, ...)
-	
+
 {
-	unsigned int i, j;
-	t_print t[] = {
-		{"c", p_char},
-		{"s", p_string},
-		{"i", p_integer},
-		{"f", p_float},
-		{NULL, NULL}
-	};
+	unsigned int i, j
+		t_print t[] = {
+			{"c", p_char},
+			{"s", p_string},
+			{"i", p_integer},
+			{"f", p_float},
+			{NULL, NULL}
+		};
 	va_list valist;
 	char *s = "";
 
@@ -65,9 +73,9 @@ void print_all(const char * const format, ...)
 			if (*(t[j].x) == format[i])
 			{
 				printf("%s", s);
-				t[j].T_func(valist);
-				s = ", ";
-				break;
+				t[j].T_func(valist)
+					s = ", ";
+				break
 			}
 			j++;
 		}
